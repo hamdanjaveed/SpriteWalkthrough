@@ -21,6 +21,9 @@
 		AC7B735A17D0FD2A0098E561 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7B733C17D0FD2A0098E561 /* UIKit.framework */; };
 		AC7B736217D0FD2A0098E561 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC7B736017D0FD2A0098E561 /* InfoPlist.strings */; };
 		AC7B736417D0FD2A0098E561 /* SpriteWalkthroughTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7B736317D0FD2A0098E561 /* SpriteWalkthroughTests.m */; };
+		AC7B736F17D0FE330098E561 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7B736E17D0FE330098E561 /* SpriteKit.framework */; };
+		AC7B737217D0FEC80098E561 /* HelloScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7B737117D0FEC80098E561 /* HelloScene.m */; };
+		AC7B737517D104940098E561 /* SpaceshipScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7B737417D104940098E561 /* SpaceshipScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		AC7B735F17D0FD2A0098E561 /* SpriteWalkthroughTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpriteWalkthroughTests-Info.plist"; sourceTree = "<group>"; };
 		AC7B736117D0FD2A0098E561 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AC7B736317D0FD2A0098E561 /* SpriteWalkthroughTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpriteWalkthroughTests.m; sourceTree = "<group>"; };
+		AC7B736E17D0FE330098E561 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		AC7B737017D0FEC80098E561 /* HelloScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloScene.h; sourceTree = "<group>"; };
+		AC7B737117D0FEC80098E561 /* HelloScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloScene.m; sourceTree = "<group>"; };
+		AC7B737317D104930098E561 /* SpaceshipScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceshipScene.h; sourceTree = "<group>"; };
+		AC7B737417D104940098E561 /* SpaceshipScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceshipScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC7B736F17D0FE330098E561 /* SpriteKit.framework in Frameworks */,
 				AC7B733B17D0FD2A0098E561 /* CoreGraphics.framework in Frameworks */,
 				AC7B733D17D0FD2A0098E561 /* UIKit.framework in Frameworks */,
 				AC7B733917D0FD2A0098E561 /* Foundation.framework in Frameworks */,
@@ -101,6 +110,7 @@
 		AC7B733717D0FD2A0098E561 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC7B736E17D0FE330098E561 /* SpriteKit.framework */,
 				AC7B733817D0FD2A0098E561 /* Foundation.framework */,
 				AC7B733A17D0FD2A0098E561 /* CoreGraphics.framework */,
 				AC7B733C17D0FD2A0098E561 /* UIKit.framework */,
@@ -117,6 +127,10 @@
 				AC7B734A17D0FD2A0098E561 /* Main.storyboard */,
 				AC7B734D17D0FD2A0098E561 /* SpriteViewController.h */,
 				AC7B734E17D0FD2A0098E561 /* SpriteViewController.m */,
+				AC7B737017D0FEC80098E561 /* HelloScene.h */,
+				AC7B737117D0FEC80098E561 /* HelloScene.m */,
+				AC7B737317D104930098E561 /* SpaceshipScene.h */,
+				AC7B737417D104940098E561 /* SpaceshipScene.m */,
 				AC7B735017D0FD2A0098E561 /* Images.xcassets */,
 				AC7B733F17D0FD2A0098E561 /* Supporting Files */,
 			);
@@ -159,6 +173,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC7B736717D0FD2A0098E561 /* Build configuration list for PBXNativeTarget "SpriteWalkthrough" */;
 			buildPhases = (
+				AC7B736D17D0FD410098E561 /* ShellScript */,
 				AC7B733117D0FD2A0098E561 /* Sources */,
 				AC7B733217D0FD2A0098E561 /* Frameworks */,
 				AC7B733317D0FD2A0098E561 /* Resources */,
@@ -245,12 +260,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AC7B736D17D0FD410098E561 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbN=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbN=$((0x$bN))\nbN=$(($bN + 1))\nbN=$(printf \"%X\" $bN)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bN\" \"$INFOPLIST_FILE\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC7B733117D0FD2A0098E561 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AC7B734517D0FD2A0098E561 /* main.m in Sources */,
+				AC7B737217D0FEC80098E561 /* HelloScene.m in Sources */,
+				AC7B737517D104940098E561 /* SpaceshipScene.m in Sources */,
 				AC7B734917D0FD2A0098E561 /* SpriteAppDelegate.m in Sources */,
 				AC7B734F17D0FD2A0098E561 /* SpriteViewController.m in Sources */,
 			);
